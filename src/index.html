@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="modal">
+		<dialog id="task-dialog">
+			<h2>Add new task</h2>
+			<form action="">
+				<label for="task-title"><span>Title</span></label>
+				<input type="text" name="taskTitle" id="task-title" placeholder="Enter title" required>
+				<label for="task-description"><span>Description</span></label>
+				<input type="text" name="taskDescription" id="task-description" placeholder="Enter Description" required>
+				<div>
+					<input type="date" name="taskDate" id="task-date" required>
+					<input list="task-priority" placeholder="Priority" id="task-priority-input" required>
+					<datalist id="task-priority">
+						<option value="Priority 1"></option>
+						<option value="Priority 2"></option>
+						<option value="Priority 3"></option>
+						<option value="Priority 4"></option>
+					</datalist>
+				</div>
+				<div>
+					<button id="cancel" type="button">Cancel</button>
+					<button id="add-task" type="button">Add task</button>
+				</div>
+			</form>
+		</dialog>
+		<dialog id="project-dialog">
+			<h2>Add new project</h2>
+			<form action="">
+				<label for="project-title"><span>Title</span></label>
+				<input type="text" name="projecTitle" id="project-title" placeholder="Enter title" required>
+				<label for="project-color"><span>Color</span></label>
+				<input type="color" name="projectColor" id="project-color" required>
+				<div>
+					<button id="cancel" type="button">Cancel</button>
+					<button id="add-project" type="button">Add project</button>
+				</div>
+			</form>
+		</dialog>
+		<dialog id="project-edit-dialog">
+			<h2>Edit project</h2>
+			<form action="">
+				<label for="project-edit-title"><span>Title</span></label>
+				<input type="text" name="projecTitle" id="project-edit-title" placeholder="Enter title" required>
+				<label for="project-edit-color"><span>Color</span></label>
+				<input type="color" name="projectColor" id="project-edit-color" required>
+				<div>
+					<button id="cancel" type="button">Cancel</button>
+					<button id="edit-project" type="button">Edit project</button>
+				</div>
+			</form>
+		</dialog>
+	</div>
+
+  <div id="header">
+    Header
+  </div>
+  <div id="sidebar">
+    <div id="show-task-dialog">
+			<button>+</button>
+			<h3>Add Task</h3>
+		</div>
+		<div id="sidebar-default">
+			<div>
+				<div id="project-sidebar-label">ꞏ</div>
+				<div id="inbox">Inbox</div>
+			</div>
+			<div>
+				<div id="project-sidebar-label">ꞏ</div>
+				<div id="today">Today</div>
+			</div>
+			<div>
+				<div id="project-sidebar-label">ꞏ</div>
+				<div id="upcoming">Upcoming</div>
+			</div>
+			<div>
+				<div id="project-sidebar-label">ꞏ</div>
+				<div id="completed">Completed</div>
+			</div>
+		</div>
+		<div id="show-project-dialog">
+			<button>+</button>
+			<h3>My Projects</h3>
+		</div>
+		<div id="sidebar-content">
+		</div>
+  </div>
+  <div id="main">
+		<h2 id="project-title-container"></h2>
+    <div id="project-content">
+
+		</div>
+  </div>
+</body>
+</html>
